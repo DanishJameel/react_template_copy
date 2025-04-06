@@ -1,0 +1,45 @@
+{
+  "timeline_index": 9,
+  "planner": {
+    "Team Leader": {
+      "1": {
+        "task_id": "1",
+        "dependent_task_ids": [],
+        "instruction": "Create a single page web application that integrates the Vapi AI voice agent using React and the provided code snippets. Use the provided assistant ID '9f33adc7-01df-4f73-9390-6e3a327c04d9' and public key '67574b3b-5a7a-427a-ad76-d221b27d79c2'.",
+        "task_type": "general",
+        "code": "",
+        "result": "",
+        "is_success": false,
+        "is_finished": true,
+        "assignee": "Alex",
+        "start_at": 1743949427.3889787,
+        "end_at": 1743949571.0804703
+      },
+      "current_task_id": "1"
+    }
+  },
+  "gallery_last_file": {},
+  "timeline_status": {
+    "1": 1,
+    "2": 1,
+    "3": 1,
+    "5": 1,
+    "6": 1,
+    "7": 0,
+    "8": 1,
+    "9": 1
+  },
+  "preview_servers": {
+    "ed9748c5-7710-448a-817f-421e21c72b5d": {
+      "role": "Alex",
+      "port": 5173,
+      "subdomain": "vapi-voice-assistant-5kbg8d-ee15c-c72b5d",
+      "server": "73ee5908-2a1a-406d-bf8d-2d34abc1cc4e",
+      "cmd": "pnpm i && pnpm run lint && pnpm run dev",
+      "timeline_index": 7,
+      "status": "success",
+      "logs": []
+    }
+  },
+  "deploy": {}
+}
