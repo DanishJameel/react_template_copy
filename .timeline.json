@@ -1,5 +1,5 @@
 {
-  "timeline_index": 9,
+  "timeline_index": 15,
   "planner": {
     "Team Leader": {
       "1": {
@@ -13,9 +13,24 @@
         "is_finished": true,
         "assignee": "Alex",
         "start_at": 1743949427.3889787,
-        "end_at": 1743949571.0804703
+        "end_at": 1743949695.9511368
       },
-      "current_task_id": "1"
+      "current_task_id": "2",
+      "2": {
+        "task_id": "2",
+        "dependent_task_ids": [
+          "1"
+        ],
+        "instruction": "Update the existing Vapi AI voice agent implementation:\n1. Change the application name to 'Medical Appointment Booking'\n2. Modify the UI to only show the phone icon (round button) without chat interface\n3. Remove the conversation history panel\n4. Update the assistant's system prompt to be a medical appointment booking assistant",
+        "task_type": "general",
+        "code": "",
+        "result": "",
+        "is_success": false,
+        "is_finished": true,
+        "assignee": "Alex",
+        "start_at": 1743949695.9511425,
+        "end_at": 1743949770.9000428
+      }
     }
   },
   "gallery_last_file": {},
@@ -27,7 +42,12 @@
     "6": 1,
     "7": 0,
     "8": 1,
-    "9": 1
+    "9": 1,
+    "10": 1,
+    "12": 1,
+    "13": 1,
+    "14": 1,
+    "15": 1
   },
   "preview_servers": {
     "ed9748c5-7710-448a-817f-421e21c72b5d": {
