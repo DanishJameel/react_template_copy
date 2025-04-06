@@ -16,12 +16,12 @@ function App() {
       firstMessage: "Hi, I'm your medical appointment assistant. How may I help you schedule your appointment today?",
     };
 
-    // Button configuration - showing only phone icon
+    // Button configuration
     const buttonConfig = {
-      position: "bottom-right",
-      offset: "40px",
-      width: "60px",
-      height: "60px",
+      position: "center", // custom position
+      offset: "0px",
+      width: "80px", // slightly larger for better visibility
+      height: "80px",
       idle: {
         color: "rgb(93, 254, 202)",
         type: "round",
@@ -77,11 +77,11 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white p-8">
-      <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl font-bold text-gray-800 mb-4 text-center">
+      <div className="max-w-4xl mx-auto text-center">
+        <h1 className="text-4xl font-bold text-gray-800 mb-4">
           Medical Appointment Booking
         </h1>
-        <p className="text-center text-gray-600 text-lg mb-8">
+        <p className="text-gray-600 text-lg mb-8">
           Click the phone icon to schedule your appointment using voice assistance
         </p>
       </div>
