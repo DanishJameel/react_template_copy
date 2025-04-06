@@ -5,17 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Medical Appointment Booking</title>
   <style>
-    /* Custom styles to position the Vapi button */
-    .vapi-button-container {
-      position: static !important;
-      margin-top: 2rem !important;
-      display: flex !important;
-      justify-content: center !important;
-      align-items: center !important;
+    /* Ensure body takes full height and centers content */
+    body, html {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Container for the Vapi button */
+    #vapi-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%; /* Full viewport height */
+      width: 100%;  /* Full viewport width */
     }
   </style>
 </head>
 <body>
+  <div id="vapi-container"></div>
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
   <script>
@@ -27,6 +37,33 @@
       g.defer = true;
       g.async = true;
       s.parentNode.insertBefore(g, s);
+      g.onload = function() {
+        vapiInstance = window.vapiSDK.run({
+          apiKey: "67574b3b-5a7a-427a-ad76-d221b27d79c2",
+          assistant: "9f33adc7-01df-4f73-9390-6e3a327c04d9",
+          config: {
+            position: "center",
+            width: "128px",
+            height: "128px",
+            idle: {
+              color: "rgb(59, 130, 246)",
+              type: "round",
+              icon: "https://unpkg.com/lucide-static@0.321.0/icons/stethoscope.svg"
+            },
+            loading: {
+              color: "rgb(96, 165, 250)",
+              type: "round",
+              icon: "https://unpkg.com/lucide-static@0.321.0/icons/loader-2.svg"
+            },
+            active: {
+              color: "rgb(239, 68, 68)",
+              type: "round",
+              icon: "https://unpkg.com/lucide-static@0.321.0/icons/phone-off.svg"
+            }
+          }
+        });
+        document.getElementById('vapi-container').appendChild(vapiInstance.button);
+      };
     })(document, "script");
   </script>
 </body>
