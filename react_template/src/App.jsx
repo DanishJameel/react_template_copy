@@ -18,9 +18,8 @@ function App() {
 
     // Button configuration
     const buttonConfig = {
-      position: "center", // custom position
-      offset: "0px",
-      width: "80px", // slightly larger for better visibility
+      position: "custom", // custom position
+      width: "80px",
       height: "80px",
       idle: {
         color: "rgb(93, 254, 202)",
@@ -76,12 +75,12 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white p-8">
-      <div className="max-w-4xl mx-auto text-center">
+    <div className="min-h-screen flex flex-col items-center justify-start pt-20 bg-gradient-to-b from-blue-50 to-white">
+      <div className="text-center mb-4">
         <h1 className="text-4xl font-bold text-gray-800 mb-4">
           Medical Appointment Booking
         </h1>
-        <p className="text-gray-600 text-lg mb-8">
+        <p className="text-gray-600 text-lg">
           Click the phone icon to schedule your appointment using voice assistance
         </p>
       </div>
