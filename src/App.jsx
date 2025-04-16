@@ -2,23 +2,21 @@ import React, { useEffect } from 'react';
 
 function App() {
   useEffect(() => {
-    // Define assistant configuration
     const assistant = {
       model: {
         provider: "openai",
         model: "gpt-3.5-turbo",
-        systemPrompt: "You're a medical appointment booking assistant. Help patients schedule appointments, collect basic information, and answer questions about services and availability. Be professional, courteous and efficient.",
+        systemPrompt: "You're a lead qualification assistant. Help qualify leads by asking relevant questions, gathering necessary information, and offering courteous responses. Be efficient, friendly, and goal-oriented.",
       },
       voice: {
         provider: "11labs",
         voiceId: "paula",
       },
-      firstMessage: "Hi, I'm your medical appointment assistant. How may I help you schedule your appointment today?",
+      firstMessage: "Hi, I'm your assistant for lead qualification. May I know your name and what you're looking for today?",
     };
 
-    // Button configuration
     const buttonConfig = {
-      position: "custom", // custom position
+      position: "custom",
       width: "80px",
       height: "80px",
       idle: {
@@ -38,7 +36,6 @@ function App() {
       },
     };
 
-    // Initialize Vapi instance when script loads
     window.vapiInstance = null;
     if (typeof window.vapiSDK !== 'undefined') {
       initializeVapi();
@@ -46,12 +43,11 @@ function App() {
 
     function initializeVapi() {
       window.vapiInstance = window.vapiSDK.run({
-        apiKey: "67574b3b-5a7a-427a-ad76-d221b27d79c2",
-        assistant: "9f33adc7-01df-4f73-9390-6e3a327c04d9",
+        apiKey: "0e4f71ef-705b-4d27-aae9-89b0a032dede",
+        assistant: "9810c21c-fe61-4ed2-9bbd-de1532f18d71",
         config: buttonConfig,
       });
 
-      // Set up event listeners
       window.vapiInstance.on('speech-start', () => {
         console.log('Speech has started');
       });
@@ -78,10 +74,10 @@ function App() {
     <div className="min-h-screen flex flex-col items-center justify-start pt-20 bg-gradient-to-b from-blue-50 to-white">
       <div className="text-center mb-4">
         <h1 className="text-4xl font-bold text-gray-800 mb-4">
-          Medical Appointment Booking
+          Lead Qualification Assistant
         </h1>
         <p className="text-gray-600 text-lg">
-          Click the phone icon to schedule your appointment using voice assistance
+          Click the phone icon to start qualifying leads using voice assistance
         </p>
       </div>
     </div>
