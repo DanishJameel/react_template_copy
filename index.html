@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Medical Appointment Booking</title>
+  <title>Lead Qualification Agent</title>
   <style>
-    /* Ensure body takes full height and centers content */
     body, html {
       height: 100%;
       margin: 0;
@@ -14,13 +13,12 @@
       justify-content: center;
     }
 
-    /* Container for the Vapi button */
     #vapi-container {
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100%; /* Full viewport height */
-      width: 100%;  /* Full viewport width */
+      height: 100%;
+      width: 100%;
     }
   </style>
 </head>
@@ -32,15 +30,15 @@
     var vapiInstance = null;
     (function (d, t) {
       var g = document.createElement(t),
-        s = d.getElementsByTagName(t)[0];
+          s = d.getElementsByTagName(t)[0];
       g.src = "https://cdn.jsdelivr.net/gh/VapiAI/html-script-tag@latest/dist/assets/index.js";
       g.defer = true;
       g.async = true;
       s.parentNode.insertBefore(g, s);
-      g.onload = function() {
+      g.onload = function () {
         vapiInstance = window.vapiSDK.run({
-          apiKey: "67574b3b-5a7a-427a-ad76-d221b27d79c2",
-          assistant: "9f33adc7-01df-4f73-9390-6e3a327c04d9",
+          apiKey: "0e4f71ef-705b-4d27-aae9-89b0a032dede",
+          assistant: "9810c21c-fe61-4ed2-9bbd-de1532f18d71",
           config: {
             position: "center",
             width: "128px",
